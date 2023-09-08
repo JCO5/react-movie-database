@@ -19,7 +19,7 @@ const MovieCard = ({poster_path, title, release_date}) => {
 MovieCard.propTypes = {
     poster_path: PropTypes.string,
     title: PropTypes.string,
-    release_date: PropTypes.number,
+    release_date: PropTypes.string,
 };
 
 export default MovieCard;
