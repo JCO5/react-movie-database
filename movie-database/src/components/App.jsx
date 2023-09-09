@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import '../styles/App.css';
-import Popular from './Popular';
-import Upcoming from './Upcoming';
-import NowPlaying from './NowPlaying';
-import TopRated from './TopRated';
+import MovieList from './MovieList';
+// import MovieCarousel from './MovieCarousel';
+
 
 function App() {
   const [selectedOption, setSelectedOption] = useState('popular'); // Default to 'movieList'
@@ -15,8 +14,10 @@ function App() {
 
   return (
     <>
+    <div>
+      {/* <MovieCarousel /> */}
+    </div>
       <div className="card">
-
         {/* Radio buttons */}
         <div>
           <input
@@ -62,11 +63,11 @@ function App() {
       </div>
 
       {/* Conditional rendering of components */}
-      {selectedOption === 'popular' && <Popular />}
-      {selectedOption === 'now-playing' && <NowPlaying />}
-      {selectedOption === 'upcoming' && <Upcoming />}
-      {selectedOption === 'top-rated' && <TopRated />}
-
+      {selectedOption === 'popular' && <MovieList category="popular" />}
+      {selectedOption === 'now-playing' && <MovieList category="now_playing" />}
+      {selectedOption === 'upcoming' && <MovieList category="upcoming" />}
+      {selectedOption === 'top-rated' && <MovieList category="top_rated" />}
+      
     </>
   );
 }
