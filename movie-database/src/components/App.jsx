@@ -2,10 +2,11 @@ import { useState } from 'react';
 import '../styles/App.css';
 import MovieList from './MovieList';
 // import MovieCarousel from './MovieCarousel';
+import Swipe from './Swipe';
 
 
 function App() {
-  const [selectedOption, setSelectedOption] = useState('popular'); // Default to 'movieList'
+  const [selectedOption, setSelectedOption] = useState('popular'); // Default to 'popular'
 
   // Function to handle radio button change
   const handleRadioChange = (event) => {
@@ -14,9 +15,9 @@ function App() {
 
   return (
     <>
-    <div>
       {/* <MovieCarousel /> */}
-    </div>
+      <Swipe />
+    
       <div className="card">
         {/* Radio buttons */}
         <div>

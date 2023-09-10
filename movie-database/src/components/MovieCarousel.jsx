@@ -5,7 +5,7 @@ import MovieCard from './MovieCard';
 const MovieCarousel = () => {
     const [movies, setMovies] = useState([])
 
-    useEffect(() =>{
+    useEffect(() => {
       const fetchMovies = async() => {
         const {data} = await tmdb.get('movie/popular')
         setMovies(data.results.slice(0, 3))
