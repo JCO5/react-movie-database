@@ -19,7 +19,7 @@ const MovieCard = ({poster_path, vote_average, title, release_date}) => {
 
 MovieCard.propTypes = {
     poster_path: PropTypes.string,
-    vote_average: PropTypes.string,
+    vote_average: PropTypes.number,
     title: PropTypes.string,
     release_date: PropTypes.string,
 };
