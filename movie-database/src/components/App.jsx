@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import '../styles/App.css';
 import MovieList from './MovieList';
-// import MovieCarousel from './MovieCarousel';
-import Swipe from './Swipe';
-
+import MovieCarousel from './MovieCarousel';
 
 function App() {
   const [selectedOption, setSelectedOption] = useState('popular'); // Default to 'popular'
@@ -15,8 +13,7 @@ function App() {
 
   return (
     <>
-      {/* <MovieCarousel /> */}
-      <Swipe />
+      <MovieCarousel />
     
       <div className="card">
         {/* Radio buttons */}
