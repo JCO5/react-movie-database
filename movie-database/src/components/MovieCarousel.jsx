@@ -56,7 +56,7 @@ const MovieCarousel = () => {
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
-        centeredSlides={true}
+        centeredSlides={false}
         loop={true}
         slidesPerView={'auto'}
         coverflowEffect={{
@@ -73,7 +73,7 @@ const MovieCarousel = () => {
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
-        // initialSlide={3}
+        initialSlide={3}
       >
         {movies.map((movie, index) => (
           <SwiperSlide key={index}>
