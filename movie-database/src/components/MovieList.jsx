@@ -31,7 +31,7 @@ const MovieList = ({ category }) => {
   };
 
   return (
-    <div className="card">
+    <div className="card grid grid-cols-1 md:grid-cols-3">
       {movies.map((movie, index) => {
         return <MovieCard key={index} {...movie} />;
       })}

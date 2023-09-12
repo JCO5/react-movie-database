@@ -17,7 +17,7 @@ const MovieCarousel = () => {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const { data } = await tmdb.get('movie/now_playing');
+      const { data } = await tmdb.get('trending/movie/week');
       setMovies(data.results.slice(0, 7));
     };
 
