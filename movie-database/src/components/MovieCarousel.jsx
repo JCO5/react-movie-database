@@ -1,32 +1,6 @@
-// import {useEffect, useState} from 'react';
-// import tmdb from '../api/tmdb';
-// import MovieCard from './MovieCard';
-
-// const MovieCarousel = () => {
-//     const [movies, setMovies] = useState([])
-
-//     useEffect(() => {
-//       const fetchMovies = async() => {
-//         const {data} = await tmdb.get('movie/popular')
-//         setMovies(data.results.slice(0, 6))
-//       };
-
-//       fetchMovies();
-//     },[]);
-
-//     return ( 
-//     <div className="card">
-//         {movies.map((movie,index)=>{
-//             return <MovieCard key={index} {...movie} />
-//         })}
-//     </div>
-//     );
-// };
-
-// export default MovieCarousel;
-
 import { useEffect, useState } from 'react';
 import tmdb from '../api/tmdb';
+import '../styles/App.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -63,7 +37,7 @@ const MovieCarousel = () => {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 2.5,
+          modifier: 4.5,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
         navigation={{
