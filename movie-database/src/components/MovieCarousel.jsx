@@ -56,8 +56,8 @@ const MovieCarousel = () => {
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
-        centeredSlides={false}
-        loop={true}
+        centeredSlides={true}
+        loop={false}
         slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 0,
