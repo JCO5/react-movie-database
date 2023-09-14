@@ -26,10 +26,7 @@ const MovieList = ({ category }) => {
     fetchData();
   },[category]);
 
-  MovieList.propTypes = {
-    category: PropTypes.string,
-  };
-
+  
   return (
     <div className="card grid grid-cols-1 md:grid-cols-3">
       {movies.map((movie, index) => {
@@ -37,6 +34,10 @@ const MovieList = ({ category }) => {
       })}
     </div>
   );
+};
+
+MovieList.propTypes = {
+  category: PropTypes.string,
 };
 
 export default MovieList;

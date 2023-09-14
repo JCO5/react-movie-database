@@ -65,7 +65,7 @@ function App() {
       {selectedOption === 'now-playing' && <MovieList category="now_playing" />}
       {selectedOption === 'upcoming' && <MovieList category="upcoming" />}
       {selectedOption === 'top-rated' && <MovieList category="top_rated" />}
-      
+
     </>
   );
 }
