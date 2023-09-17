@@ -1,30 +1,3 @@
-// import {useEffect, useState} from 'react';
-// import tmdb from '../api/tmdb';
-// import MovieCard from './MovieCard';
-
-// const MovieCarousel = () => {
-//     const [movies, setMovies] = useState([])
-
-//     useEffect(() => {
-//       const fetchMovies = async() => {
-//         const {data} = await tmdb.get('movie/popular')
-//         setMovies(data.results.slice(0, 6))
-//       };
-
-//       fetchMovies();
-//     },[]);
-
-//     return ( 
-//     <div className="card">
-//         {movies.map((movie,index)=>{
-//             return <MovieCard key={index} {...movie} />
-//         })}
-//     </div>
-//     );
-// };
-
-// export default MovieCarousel;
-
 import { useEffect, useState } from 'react';
 import tmdb from '../api/tmdb';
 import '../styles/App.css';
@@ -34,6 +7,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const getPosterURL = (posterpath)=>{
   return `https://www.themoviedb.org/t/p/original/${posterpath}`
@@ -78,7 +52,9 @@ const MovieCarousel = () => {
       >
         {movies.map((movie, index) => (
           <SwiperSlide key={index}>
+            <Link to={`single/${movie.id}`}>
             <img src={getPosterURL(movie.poster_path)} alt={movie.title} />
+            </Link>
           </SwiperSlide>
         ))}
 

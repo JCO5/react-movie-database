@@ -17,7 +17,7 @@ let { id } = useParams(); // Get the movie ID from the URL
     fetchData();
   },[id]);
 
-// Since the rating numbers were displaying two decimal digits, I had to create this conditional in order to round the number to the nearest tenth 
+// Since the ratings were displaying two decimal digits, I created a conditional that rounds the rating to the nearest tenth 
   const roundVoteAverage = (voteAverage) => {
     if (Number.isInteger(voteAverage)) {
       return voteAverage.toString(); // If it's a whole number, convert to string without decimal
