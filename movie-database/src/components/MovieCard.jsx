@@ -17,20 +17,25 @@ const MovieCard = ( movie ) => {
     const toggleFavorites = !isFavorite ? addMovieToFavorites : removeMovieFromFavorites;
     
     return (
-    <div className="card">
-        <Link to={`/single/${movie.id}`}>
-        <img src={getPosterURL(movie.poster_path)} alt={movie.title} /> 
-        </Link>
-        <div className="btn">
-        <button className="btn" onClick={() => toggleFavorites( movie )}>{isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}</button>
+    <section className="card">
+        <div className='group relative'>
+            <Link to={`/single/${movie.id}`}>
+            <img src={getPosterURL(movie.poster_path)} alt={movie.title} /> 
+            </Link>    
+            <button className="btn" onClick={() => toggleFavorites( movie )}>
+                {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}.
+            </button>
+            <div className="card-info absolute bg-black/20 flex -top-10 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <h3 className='text-base'>{movie.overview}</h3>
+            </div>
+            <div>
+                <h3>{movie.vote_average}</h3>
+                <h3>{movie.title}</h3>
+                <h3>{movie.release_date ? movie.release_date : "-"}</h3>
+            </div>
         </div>
-        <div className="card-info">
-        </div>
-            <h3>{movie.vote_average}</h3>
-            <h3>{movie.title}</h3>
-            <h3>{movie.release_date ? movie.release_date : "-"}</h3>
-            <h3>{movie.overview}</h3>
-    </div>
+    </section>
+
     );
 };
 

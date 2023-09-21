@@ -8,19 +8,30 @@ const MovieList = ({ category }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let endpoint = '';
 
-      if (category === 'popular') {
-        endpoint = 'movie/popular';
-      } else if (category === 'now_playing') {
-        endpoint = 'movie/now_playing';
-      } else if (category === 'upcoming') {
-        endpoint = 'movie/upcoming';
-      } else if (category === 'top_rated') {
-        endpoint = 'movie/top_rated';
-      }
-      const { data } = await tmdb.get(endpoint);
-      setMovies(data.results.slice(0, 12));
+        let endpoint = '';
+        
+        if (category === 'popular') {
+          endpoint = 'movie/popular';
+        } else if (category === 'now_playing') {
+          endpoint = 'movie/now_playing';
+        } else if (category === 'upcoming') {
+          endpoint = 'movie/upcoming';
+        } else if (category === 'top_rated') {
+          endpoint = 'movie/top_rated';
+        }
+        const { data } = await tmdb.get(endpoint);
+        setMovies(data.results.slice(0, 12));
+      // try {
+      //   const { data } = await tmdb.get(endpoint);
+      //   if (Array.isArray(data.results)) {
+      //   setMovies(data.results.slice(0, 12));
+      //   } else {
+      //     console.error('API response does not contain data.results', data);
+      //   }
+      // } catch (error) {
+      //   console.error('API request failed:', error);
+      // }
     };
 
     fetchData();
@@ -29,9 +40,11 @@ const MovieList = ({ category }) => {
   
   return (
     <div className="card grid grid-cols-1 md:grid-cols-3">
-      {movies.map((movie, index) => {
-        return <MovieCard key={index} {...movie} />;
-      })}
+      {movies && movies.length > 0 &&
+        movies.map((movie, index) => {
+          return <MovieCard key={index} {...movie} />;
+        })
+      }
     </div>
   );
 };
