@@ -34,20 +34,20 @@ const Single = () => {
   };
 
   return (
-    <div>
+    <div grid-cols-2>
       {(single != undefined && single != null && single != '') && (
         <>
-          <img src={`https://image.tmdb.org/t/p/original${single?.poster_path}`} alt={single.title} />
+          <img className="col-start-1 col-span-1" src={`https://image.tmdb.org/t/p/original${single?.poster_path}`} alt={single.title} />
           <div className="btn">
             <button className="btn" onClick={() => toggleFavorites(single)}>
               {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
             </button>
           </div>
-          <h2>{single.title}</h2>
+          <h2 className="flex-auto">{single.title}</h2>
           <p>{single.release_date}</p>
           {/* Called the conditional here */}
-          <p>{roundVoteAverage(single.vote_average)}</p>
-          <p>{single.overview}</p>
+          <p className="flex-auto">{roundVoteAverage(single.vote_average)}</p>
+          <p className="flex-none">{single.overview}</p>
         </>
       )}
     </div>
