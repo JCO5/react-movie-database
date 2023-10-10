@@ -11,6 +11,15 @@ const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
+// Since the ratings were displaying two decimal digits, I created a conditional that rounds the rating to the nearest tenth 
+const roundVoteAverage = (voteAverage) => {
+if (Number.isInteger(voteAverage)) {
+    return voteAverage.toString(); // If it's a whole number, convert to string without decimal
+} else {
+    return voteAverage.toFixed(1); // If it has a decimal, round to one decimal place
+}
+};
+
 const MovieCard = ( movie ) => {
     const { addMovieToFavorites, removeMovieFromFavorites, favorites } = useContext(GlobalContext);
 
@@ -38,7 +47,7 @@ const MovieCard = ( movie ) => {
                 <h3 className='text-base'>{movie.overview}</h3>
             </div>
             <div>
-                <h3>{movie.vote_average}</h3>
+                <h3>{movie.vote_average ? roundVoteAverage(movie.vote_average) : "No ratings"}</h3>
                 <h3>{movie.title}</h3>
                 <h3>{movie.release_date ? formatDate(movie.release_date) : "-"}</h3>
             </div>

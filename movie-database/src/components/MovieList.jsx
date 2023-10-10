@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import tmdb from '../api/tmdb';
 import MovieCard from './MovieCard';
-import PropTypes from 'prop-types';
 
 const MovieList = ({ category }) => {
   const [movies, setMovies] = useState([]);
@@ -37,10 +36,6 @@ const MovieList = ({ category }) => {
       }
     </div>
   );
-};
-
-MovieList.propTypes = {
-  category: PropTypes.string,
 };
 
 export default MovieList;

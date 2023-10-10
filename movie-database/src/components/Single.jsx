@@ -39,27 +39,29 @@ const Single = () => {
   };
 
   return (
-    <div>
-      {(single != undefined && single != null && single != '') && (
-        <>
-        {single.poster_path ? (
-          <img src={`https://image.tmdb.org/t/p/original${single?.poster_path}`} alt={single.title} />
-        ) : (
-          <div className='filler-poster'></div>
+    <section className="card">
+      <div className="group-relative">
+        {(single != undefined && single != null && single != '') && (
+          <>
+          {single.poster_path ? (
+            <img src={`https://image.tmdb.org/t/p/original${single?.poster_path}`} alt={single.title} />
+          ) : (
+            <div className='filler-poster'></div>
+          )}
+            <div className="btn">
+              <button className="btn" onClick={() => toggleFavorites(single)}>
+                {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+              </button>
+            </div>
+            <h2>{single.title}</h2>
+            <p>{formatDate(single.release_date)}</p>
+            {/* Called the conditional here */}
+            <p>{roundVoteAverage(single.vote_average)}</p>
+            <p>{single.overview}</p>
+          </>
         )}
-          <div className="btn">
-            <button className="btn" onClick={() => toggleFavorites(single)}>
-              {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-            </button>
-          </div>
-          <h2>{single.title}</h2>
-          <p>{formatDate(single.release_date)}</p>
-          {/* Called the conditional here */}
-          <p>{roundVoteAverage(single.vote_average)}</p>
-          <p>{single.overview}</p>
-        </>
-      )}
-    </div>
+      </div>
+    </section>
   );
 };
 
