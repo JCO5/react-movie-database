@@ -13,6 +13,10 @@
   --bg: #f5f5f5;
 }
 
+#root {
+  max-width: 1600px !important;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
