@@ -25,7 +25,7 @@ const [results, setResults] = useState([]);
       onChange={onChange}/>
 
       {results.length > 0 && (
-        <div className="card grid grid-cols-1 md:grid-cols-3">
+        <div className="card grid grid-cols-1 md:grid-cols-4">
           {results.map(movie => (
             <div key={movie.id}>
               <MovieCard movie={movie} />
