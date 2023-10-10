@@ -6,6 +6,7 @@ import Single from '../components/Single';
 import About from '../pages/About';
 import { Favorites } from '../pages/Favorites';
 import Search from '../pages/Search';
+import Footer from '../components/Footer';
 
 
 const AppRouter = () => {
@@ -21,6 +22,7 @@ const AppRouter = () => {
             <Route path="/favorites" element={<Favorites/>} />
             <Route path="/search" element={<Search/>} />
         </Routes>
+    <Footer/>
     </div>
     </BrowserRouter>
     </GlobalProvider>

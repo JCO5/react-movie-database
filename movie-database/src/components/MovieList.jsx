@@ -21,17 +21,7 @@ const MovieList = ({ category }) => {
           endpoint = 'movie/top_rated';
         }
         const { data } = await tmdb.get(endpoint);
-        setMovies(data.results.slice(0, 12));
-      // try {
-      //   const { data } = await tmdb.get(endpoint);
-      //   if (Array.isArray(data.results)) {
-      //   setMovies(data.results.slice(0, 12));
-      //   } else {
-      //     console.error('API response does not contain data.results', data);
-      //   }
-      // } catch (error) {
-      //   console.error('API request failed:', error);
-      // }
+        setMovies(data.results?.slice(0, 12));
     };
 
     fetchData();
