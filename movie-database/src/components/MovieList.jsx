@@ -44,13 +44,13 @@ const MovieList = ({ category }) => {
     };
 
     fetchData();
-  },[category,movieIndex,loadedMovies]);
+  }, [category, movieIndex, loadedMovies, movies, page]);
   //made category and movieIndex dependencies so those values update the site without reloading
 
   
   return (
     <div>
-    <div className="card grid grid-cols-1 md:grid-cols-3">
+    <div className="card grid grid-cols-1 md:grid-cols-4">
       {movies.map((movie, index) => {
         return index<movieIndex && <MovieCard key={index} {...movie} />;
       })}

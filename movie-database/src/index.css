@@ -20,7 +20,7 @@ html {
 
 @media (min-width: 1440px) {
   html {
-    zoom: 1.5;
+    zoom: 1.2;
   }
 }
 
@@ -71,23 +71,27 @@ body {
 }
 
 .swiper_container {
-  height: 60rem;
+  height: 50rem;
   padding: 2rem;
   position: relative;
 }
 
 .swiper-slide {
-  width: 34rem !important;
-  height: 51rem !important;
+  width: 28rem !important;
+  height: 42rem !important;
   position: relative;
   margin: 0 1rem;
 }
 
 .swiper-slide img {
-  width: 34rem;
+  width: 28rem;
   height: auto;
   border-radius: 1rem;
   object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  top: -1.3rem !important;
 }
 
 @media (max-width: 500px) {
@@ -200,4 +204,17 @@ body {
   width: 247px;
   margin: 0 auto;
   border-radius: 1rem;
+}
+
+.remove-heart, .add-heart {
+  width: 3.2rem;
+  height: auto;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  fill: rgb(177, 0, 0);
+}
+
+.btn {
+  transition: fill 0.3s ease;
 }
