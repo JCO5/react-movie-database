@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="about-page h-screen">
+    <div className="about-page h-screen flex justify-start flex-col p-16">
       <h1 className='heading p-16'>About Us</h1>
       <p>
         Welcome to our movie database website! 
@@ -12,7 +12,7 @@ function About() {
         needs of our clients. With years of experience in the industry, we have
         built a reputation for excellence and customer satisfaction.
       </p>
-      <h2>Our Team</h2>
+      <h2 className=''>Our Team</h2>
       <ul>
         <li>John Doe - CEO</li>
         <li>Jane Smith - COO</li>

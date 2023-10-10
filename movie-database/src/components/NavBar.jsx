@@ -5,8 +5,8 @@ import React, { useState } from "react";
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
     return (
-      <header className="sticky top-0 z-50">
-        <nav className="nav sticky top-0 bg-gray-900 text-white flex justify-between items-stretch gap-8 p-4 align-middle bg-gradient-to-b from-transparent via-transparent to-black">
+      <header className="sticky top-0 z-50 min-[480px]: flex-col items-center">
+        <nav className="nav bg-gray-900 text-white flex justify-between items-stretch gap-8 p-4 align-middle bg-gradient-to-b from-transparent via-transparent to-black max-[480px]: flex">
             <Link className="site-title text-5xl flex items-center" to = "/#">
               JJJ Movies
             </Link>
@@ -15,8 +15,8 @@ function NavBar() {
               <span className="h-6.4 w-full bg-white rounded-[3.2px] "></span>
               <span className="h-6.4 w-full bg-white rounded-[3.2px] "></span>
             </div>
-            <ul className="flex items-center gap-4">
-              <li>
+            <ul className="flex items-center gap-4 min-[480px]: flex-col w-full mb-4 ">
+              <li className="">
               <NavLink to = '/about'>About</NavLink>
               </li>
               <li>
