@@ -37,7 +37,7 @@ const Single = () => {
     <div>
       {(single != undefined && single != null && single != '') && (
         <>
-          <img src={`https://image.tmdb.org/t/p/original${single?.poster_path}`} alt={single.title} />
+          <img className='' src={`https://image.tmdb.org/t/p/original${single?.poster_path}`} alt={single.title} />
           <div className="btn">
             <button className="btn" onClick={() => toggleFavorites(single)}>
               {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}

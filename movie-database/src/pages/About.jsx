@@ -3,11 +3,9 @@ import React from 'react';
 function About() {
   return (
     <div className="about-page h-screen">
-      <h1>About Us</h1>
+      <h1 className='heading p-16'>About Us</h1>
       <p>
-        Welcome to our website! We are a dedicated team of individuals
-        passionate about delivering high-quality products and services to our
-        customers.
+        Welcome to our movie database website! 
       </p>
       <p>
         Our mission is to provide innovative solutions that meet the unique
