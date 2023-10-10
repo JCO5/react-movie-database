@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import tmdb from '../api/tmdb';
 import MovieCard from './MovieCard';
 
+
 const MovieList = ({ category }) => {
   const [movies, setMovies] = useState([]);
   const [movieIndex, setMovieIndex]=useState(12);
@@ -56,11 +57,18 @@ const MovieList = ({ category }) => {
       })}
       
     </div>
-    <button className="bg-blue-500 text-white font-bold p-5 rounded"onClick={() => setMovieIndex(movieIndex+increaseIndex)}>Load More...</button>
-      {/* button updates movieIndex state */}
+    {movies.length >= loadedMovies && (
+      <button
+        className="bg-blue-500 text-white font-bold p-5 rounded"
+        onClick={() => setMovieIndex(movieIndex + increaseIndex)}
+      >
+        Load More...
+      </button>
+    )}
     </div>
     
   );
 };
 
-export default MovieList;
+
+export default MovieList
