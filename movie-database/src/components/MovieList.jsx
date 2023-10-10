@@ -59,7 +59,7 @@ const MovieList = ({ category }) => {
     </div>
     {movies.length >= loadedMovies && (
       <button
-        className="bg-blue-500 text-white font-bold p-5 rounded"
+        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
         onClick={() => setMovieIndex(movieIndex + increaseIndex)}
       >
         Load More...

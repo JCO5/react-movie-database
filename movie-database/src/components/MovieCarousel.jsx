@@ -27,7 +27,7 @@ const MovieCarousel = () => {
 
   return (
     <div className="container">
-      <h1 className="heading">Trending</h1>
+      <h1 className="heading p-16">Trending</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

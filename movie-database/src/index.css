@@ -7,6 +7,8 @@
   list-style-type: none;
 }
 
+/* Index CSS is being used for MOVIE LIST */
+
 :root {
   --primary: #6a59ff;
   --white: #ffffff;
@@ -20,6 +22,12 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+/* Typography */
+
+body {
+  font-family: 'DM Sans', sans-serif;
 }
 
 @media (min-width: 1440px) {

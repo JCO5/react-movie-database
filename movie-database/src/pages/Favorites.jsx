@@ -6,7 +6,8 @@ export const Favorites = () => {
   const { favorites } = useContext(GlobalContext);
   
   return (
-    <div>
+    <div className='h-screen'>
+      <h1 className='heading p-16'>Your Favorites</h1>
       {favorites.length > 0 ? (
         <div className="card grid grid-cols-1 md:grid-cols-4">
           {favorites.map((movie) => (
