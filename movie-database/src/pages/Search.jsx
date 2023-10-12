@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {TMDB_API_KEY} from '../api/tmdb';
+import {BASE_URL} from '../api/tmdb';
 import MovieCard from '../components/MovieCard'
 
 export const Search = () => {
@@ -11,13 +12,13 @@ const [results, setResults] = useState([]);
     
     setQuery(e.target.value);
 
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`).then((res) => res.json()).then(data => {
+    fetch(`${BASE_URL}/search/movie?api_key=${TMDB_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`).then((res) => res.json()).then(data => {
       setResults(!data.errors ? data.results : []);
     });
   };
 
   return (
-    <div>
+    <div className='h-screen'>
       <input type='text' 
       placeholder='Search for a movie'
       className='search-text'
@@ -26,11 +27,9 @@ const [results, setResults] = useState([]);
 
       {results.length > 0 && (
         <div className="card grid grid-cols-1 md:grid-cols-4">
-          {results.map(movie => (
-            <div key={movie.id}>
-              <MovieCard movie={movie} />
-            </div>
-          ))}
+          {results.map((movie, index) => {
+        return <MovieCard key={index} {...movie} />;
+      })}
         </div>
       )}
     </div>
