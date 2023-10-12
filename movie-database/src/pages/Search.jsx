@@ -29,11 +29,9 @@ export const Search = () => {
 
       {results.length > 0 ? (
         <div className="card grid grid-cols-1 md:grid-cols-4">
-          {results.map((movie) => (
-            <div key={movie.id}>
-              <MovieCard movie={movie} />
-            </div>
-          ))}
+          {results.map((movie) => {
+             return <MovieCard key={movie.id} movie={movie} /> 
+          })}
         </div>
       ) : (
         <div className="h-screen">

@@ -40,7 +40,7 @@ const MovieList = ({ category }) => {
         setMovies(newMovies);
       }else{
         const { data } = await tmdb.get(endpoint);
-        setMovies(data.results.slice(0, loadedMovies));
+        setMovies(data?.results?.slice(0, loadedMovies));
       }
     };
 
@@ -52,12 +52,12 @@ const MovieList = ({ category }) => {
   return (
     <div>
     <div className="card grid grid-cols-1 md:grid-cols-4">
-      {movies.map((movie, index) => {
+      {movies?.map((movie, index) => {
         return index<movieIndex && <MovieCard key={index} {...movie} />;
       })}
       
     </div>
-    {movies.length >= loadedMovies && (
+    {movies?.length >= loadedMovies && (
       <button
         className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
         onClick={() => setMovieIndex(movieIndex + increaseIndex)}

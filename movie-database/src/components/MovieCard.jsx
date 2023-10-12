@@ -11,6 +11,14 @@ const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
+const roundVoteAverage = (voteAverage) => {
+    if (Number.isInteger(voteAverage)) {
+      return voteAverage.toString(); // If it's a whole number, convert to string without decimal
+    } else {
+      return parseFloat(voteAverage).toFixed(1); // If it has a decimal, round to one decimal place
+    }
+};
+
 const MovieCard = ( movie ) => {
     const { addMovieToFavorites, removeMovieFromFavorites, favorites } = useContext(GlobalContext);
 
@@ -38,7 +46,7 @@ const MovieCard = ( movie ) => {
                 <h3 className='text-base'>{movie.overview}</h3>
             </div>
             <div>
-                <h3 className="absolute top-5 left-4 bg-blue-500 w-12 text-white rounded">{movie.vote_average ? movie.vote_average : "No ratings"}</h3>
+                <h3 className="absolute top-5 left-4 bg-blue-500 w-12 text-white rounded">{movie.vote_average ? roundVoteAverage(movie.vote_average) : "-"}</h3>
                 <h3>{movie.title}</h3>
                 <h3>{movie.release_date ? formatDate(movie.release_date) : "No release date"}</h3>
             </div>
