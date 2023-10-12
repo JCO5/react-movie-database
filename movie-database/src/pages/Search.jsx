@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { TMDB_API_KEY } from '../api/tmdb';
 import MovieCard from '../components/MovieCard';
+import MovieList from '../components/MovieList';
+import RadioMovies from '../components/RadioMovies';
 
 export const Search = () => {
   const [query, setQuery] = useState('');
@@ -36,8 +38,10 @@ export const Search = () => {
           ))}
         </div>
       ) : (
-        <div className="h-screen">
+        <div>
           <p className='heading mt-16'>What do you want to watch?</p>
+          <RadioMovies className="mt-16"/>
+          <MovieList/>
         </div>
       )}
     </div>

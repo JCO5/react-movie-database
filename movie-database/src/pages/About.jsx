@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return (
     <div className="about-page h-screen flex justify-start flex-col p-16">
-      <h1 className='heading p-16'>About Us</h1>
+      <h1 className='heading'>About Us</h1>
       <p>
         Welcome to our movie database website! 
       </p>
@@ -31,13 +31,6 @@ function About() {
         services, please don't hesitate to contact us. We are here to assist
         you.
       </p>
-      <address>
-        Email: info@example.com
-        <br />
-        Phone: +1 (123) 456-7890
-        <br />
-        Address: 123 Main Street, Cityville, USA
-      </address>
     </div>
   );
 }
