@@ -29,8 +29,8 @@ const MovieCarousel = () => {
     <div className="container">
     <div className='pl-16 pr-16'>
       <div className='text-left'>
-        <h1 className='heading pt-16 text-left'>Welcome to your escape!</h1>
-        <h2 className='pb-16'>The place for you to find your favorite movies or catch up on your watchlist.</h2>
+        <h1 className='heading pt-8 text-left'>Welcome to your escape!</h1>
+        <h2 className='pb-12'>The place for you to find your favorite movies or catch up on your watchlist.</h2>
       </div>
     </div>
 

@@ -212,8 +212,8 @@ body {
 
 .filler-poster {
   background-color: #9f9f9f;
-  height: 371px;
-  width: 247px;
+  width: 10%;
+  height: 10%;
   margin: 0 auto;
   border-radius: 1rem;
 }
