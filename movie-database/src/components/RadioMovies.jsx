@@ -12,7 +12,7 @@ function RadioMovies() {
 
     return (
         <>
-            <div className="card flex space-x-2 justify-evenly ">
+            <div className="card flex space-x-2 justify-evenly flex-wrap">
                 {/* Radio buttons */}
                 <div className="radio-button relative">
                     <input
@@ -24,7 +24,7 @@ function RadioMovies() {
                         onChange={handleRadioChange}
                     />
                     <label
-                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
+                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200 whitespace-nowrap"
                         htmlFor="popularRadio">Popular</label>
                 </div>
 
@@ -38,7 +38,7 @@ function RadioMovies() {
                         onChange={handleRadioChange}
                     />
                     <label
-                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
+                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200 whitespace-nowrap"
                         htmlFor="nowPlaying">Now Playing</label>
                 </div>
                 <div className="radio-button relative">
@@ -51,7 +51,7 @@ function RadioMovies() {
                         onChange={handleRadioChange}
                     />
                     <label
-                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
+                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200 whitespace-nowrap"
                         htmlFor="upcomingRadio">Upcoming</label>
                 </div>
                 <div className='radio-button relative'>
@@ -64,7 +64,7 @@ function RadioMovies() {
                         onChange={handleRadioChange}
                     />
                     <label
-                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
+                        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200 whitespace-nowrap"
                         htmlFor="topRated">Top Rated</label>
                 </div>
             </div>
