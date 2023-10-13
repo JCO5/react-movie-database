@@ -3,28 +3,27 @@ import React from 'react';
 function About() {
   return (
     <div className="about-page h-screen flex justify-start flex-col p-16">
-      <h1 className='heading'>About Us</h1>
+      <h1 className='heading'>
+        For the Movie Lovers
+      </h1>
       <p>
-        Welcome to our movie database website! 
+        Find movies you’ve been meaning to see. movies you’re excited to watch, and reminisce on movies you love.
       </p>
       <p>
-        Our mission is to provide innovative solutions that meet the unique
-        needs of our clients. With years of experience in the industry, we have
-        built a reputation for excellence and customer satisfaction.
+        JJJ Movies is an API-based movie database. We use the TMDb API for our content generation but we are not affiliated with TMDb in any form
+      </p>
+      <p>
+        An API-based Movie Database
+      </p>
+      <p>
+        For the Movie Lover in You  
       </p>
       <h2 className=''>Our Team</h2>
       <ul>
-        <li>John Doe - CEO</li>
-        <li>Jane Smith - COO</li>
-        <li>Michael Johnson - CTO</li>
-        <li>Susan Brown - CFO</li>
+        <li>Jet Cham</li>
+        <li>Joaquin Opulencia</li>
+        <li>Josh Esteban</li>
       </ul>
-      <h2>Our Values</h2>
-      <p>
-        At our core, we value integrity, teamwork, and innovation. We believe in
-        fostering a culture of collaboration and continuous improvement to
-        better serve our clients and achieve our goals.
-      </p>
       <h2>Contact Us</h2>
       <p>
         If you have any questions or would like to learn more about our
