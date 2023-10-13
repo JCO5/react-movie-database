@@ -51,7 +51,7 @@ const MovieList = ({ category }) => {
   
   return (
     <div>
-    <div className="card grid grid-cols-1 md:grid-cols-4">
+    <div className="card grid grid-cols-1 md:grid-cols-4 pt-0">
       {movies?.map((movie, index) => {
         return index<movieIndex && <MovieCard key={index} {...movie} />;
       })}

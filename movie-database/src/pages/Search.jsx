@@ -21,16 +21,16 @@ export const Search = () => {
 
   return (
     <div>
+      <p className='heading mt-16'>What do you want to watch?</p>
       <input
-        type="search"
-        placeholder="Search for a movie"
-        className= "search-text border-2 border-gray-300 bg-white text-black h-10 px-5 pr-15 rounded-full text-2xl focus:outline-none mt-16"
-        value={query}
-        onChange={onChange}
-      />
-
+            type="search"
+            placeholder="Search for a movie"
+            className= "search-text border-2 border-gray-300 bg-white text-black h-10 px-5 pr-15 rounded-full text-2xl focus:outline-none mt-16 p-8"
+            value={query}
+            onChange={onChange}
+          />
       {results.length > 0 ? (
-        <div className="card grid grid-cols-1 md:grid-cols-4">
+        <div className="card grid grid-cols-1 md:grid-cols-4 pt-none">
           {results.map((movie) => (
             <div key={movie.id}>
               <MovieCard movie={movie} />
@@ -39,7 +39,6 @@ export const Search = () => {
         </div>
       ) : (
         <div>
-          <p className='heading mt-16'>What do you want to watch?</p>
           <RadioMovies className="mt-16"/>
           <MovieList/>
         </div>
