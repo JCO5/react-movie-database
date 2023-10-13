@@ -11,7 +11,7 @@ function About() {
     },
     {
       name: 'Joaquin Opulencia',
-      github: 'https://github.com/joaquinopulencia',
+      github: 'https://github.com/jco5',
       linkedin: 'https://www.linkedin.com/in/joaquinopulencia',
       email: 'mailto:joaquin@example.com',
     },
@@ -24,8 +24,8 @@ function About() {
   ];
   
   return (
-    <div className="about-page h-screen p-16 backdrop-filter relative">
-      <div className="h-screen w-full bg-[url('../image/about-us-image.jpg')] blur absolute top-0 left-0"></div>
+    <div className="about-page p-16 backdrop-filter relative">
+      <div className="h-full w-full bg-[url('../image/about-us-image.jpg')] blur absolute top-0 left-0"></div>
       <div className='relative z-20'>
         <article>
           <h1 className='heading '>
