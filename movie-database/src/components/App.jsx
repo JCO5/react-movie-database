@@ -7,7 +7,7 @@ function App() {
     <>
       <MovieCarousel />
       <RadioMovies/>
-      <MovieList/>
+
     </>
   );
 }
