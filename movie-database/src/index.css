@@ -16,7 +16,7 @@
 }
 
 #root {
-  max-width: 1600px !important;
+  max-width: 1650px !important;
 }
 
 html {
@@ -81,6 +81,10 @@ body {
   border-radius: 1rem;
   margin: 0 auto;
   object-fit: cover;
+}
+
+.group-relative img {
+  border-radius: 4rem;
 }
 
 .swiper_container {

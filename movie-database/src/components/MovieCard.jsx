@@ -32,19 +32,16 @@ const MovieCard = ( movie ) => {
     return (
     <section className="card">
         <div className='group relative w-full'>
+
             <Link className="relative inline-block"to={`/single/${movie.id}`}>
                 {movie.poster_path ? (
                 <img src={getPosterURL(movie.poster_path)} alt={movie.title} /> 
                 ) : (
-                    // <div className='items-center text-4xl bg-gray-500 pt-16 pb-16 max-w-16 w-full h-full mx-auto rounded-lg'>
-                    <img src="../src/image/filler-poster.svg" alt={movie.title} />
-                    // </div>
-
+                <img src="../src/image/filler-poster.svg" alt={movie.title} />
                 )}
-              
-                    <h3 className='text-base card-info absolute bg-black/50 flex bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 p-8'>{movie.overview}</h3>
-                
+                <h3 className='text-base card-info absolute bg-black/50 flex bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 p-8'>{movie.overview}</h3>      
             </Link>    
+
             <button className="btn" onClick={() => toggleFavorites( movie )}>
                 {isFavorite ?
                 <svg className="w-14 h-auto absolute right-4 top-4 fill-red-700 stroke-black" clipRule="evenodd" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,11 +51,13 @@ const MovieCard = ( movie ) => {
                 <path d="m12 5.72c-2.624-4.517-10-3.198-10 2.461 0 3.725 4.345 7.727 9.303 12.54.194.189.446.283.697.283s.503-.094.697-.283c4.977-4.831 9.303-8.814 9.303-12.54 0-5.678-7.396-6.944-10-2.461z" fillRule="nonzero"/>
                 </svg> }
             </button>
+
             <div>
                 <h3 className="absolute top-5 left-4 bg-green-500 w-12 text-white rounded">{movie.vote_average ? roundVoteAverage(movie.vote_average) : "-"}</h3>
                 <h3>{movie.title}</h3>
                 <h3>{movie.release_date ? formatDate(movie.release_date) : "Release date not found"}</h3>
             </div>
+
         </div>
     </section>
 

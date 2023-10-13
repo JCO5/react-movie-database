@@ -56,7 +56,7 @@ const MovieList = ({ category }) => {
     };
 
     fetchData();
-  }, [category, movieIndex]);
+  }, [category, movieIndex, loadedMovies, movies, page]);
   //made category and movieIndex dependencies so those values update the site without reloading
   
   return (

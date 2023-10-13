@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { TMDB_API_KEY } from '../api/tmdb';
 import MovieCard from '../components/MovieCard';
-import MovieList from '../components/MovieList';
 import RadioMovies from '../components/RadioMovies';
 
 export const Search = () => {
@@ -40,7 +39,6 @@ export const Search = () => {
       ) : (
         <div>
           <RadioMovies className="mt-16"/>
-          <MovieList/>
         </div>
       )}
     </div>
