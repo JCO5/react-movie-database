@@ -24,7 +24,7 @@ export const Search = () => {
       <input
             type="search"
             placeholder="Search for a movie"
-            className= "search-text border-2 border-gray-300 bg-white text-black h-10 px-5 pr-15 rounded-full text-2xl focus:outline-none mt-16 p-8"
+            className= "search-text border-2 border-gray-300 bg-white text-black h-10 px-5 pr-15 rounded-full text-2xl focus:outline-none mt-16 p-8 mb-16"
             value={query}
             onChange={onChange}
           />

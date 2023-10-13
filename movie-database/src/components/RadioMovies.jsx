@@ -12,9 +12,9 @@ function RadioMovies() {
 
     return (
         <>
-        <div className="card flex space-x-2 justify-evenly flex-wrap">
+        <div className="card gap-2 md:grid md:grid-cols-4 grid grid-cols-2">
             {/* Radio buttons */}
-            <div className="radio-button relative">
+            <div className="radio-button relative m-4">
                 <input
                     className='hidden'
                     type="radio"
@@ -30,7 +30,7 @@ function RadioMovies() {
                 </label>
             </div>
 
-            <div className='radio-button relative'>
+            <div className='radio-button relative m-4' >
                 <input
                     className='hidden'
                     type="radio"
@@ -40,12 +40,12 @@ function RadioMovies() {
                     onChange={handleRadioChange}
                 />
                 <label
-                    className={`py-4 px-8 rounded-full cursor-pointer transition duration-200 whitespace-nowrap ${
+                    className={`py-4 px-8 rounded-full cursor-pointer transition duration-200 whitespace-nowrap w-full ${
                     selectedOption === 'now-playing' ? 'bg-green-500 text-white' : 'bg-[#111827] hover:bg-green-500 text-white'
                     }`} htmlFor="nowPlaying">Now Playing
                 </label>
             </div>
-            <div className="radio-button relative">
+            <div className="radio-button relative m-4">
                 <input
                     className='hidden'
                     type="radio"
@@ -60,7 +60,7 @@ function RadioMovies() {
                     }`} htmlFor="upcomingRadio">Upcoming
                 </label>
             </div>
-            <div className='radio-button relative'>
+            <div className='radio-button relative m-4'>
                 <input
                     className='hidden'
                     type="radio"
