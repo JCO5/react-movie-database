@@ -55,7 +55,7 @@ const MovieCard = ( movie ) => {
                 </svg> }
             </button>
             <div>
-                <h3 className="absolute top-5 left-4 bg-blue-500 w-12 text-white rounded">{movie.vote_average ? roundVoteAverage(movie.vote_average) : "-"}</h3>
+                <h3 className="absolute top-5 left-4 bg-green-500 w-12 text-white rounded">{movie.vote_average ? roundVoteAverage(movie.vote_average) : "-"}</h3>
                 <h3>{movie.title}</h3>
                 <h3>{movie.release_date ? formatDate(movie.release_date) : "Release date not found"}</h3>
             </div>
