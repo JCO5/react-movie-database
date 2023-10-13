@@ -76,10 +76,11 @@ body {
 
 .card img {
   display: inline-flex;
-  max-width: 100%;
+  aspect-ratio: 2/3;
+  width: 100%;
   border-radius: 1rem;
   margin: 0 auto;
-  height: auto;
+  object-fit: cover;
 }
 
 .swiper_container {
@@ -204,29 +205,4 @@ body {
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
-}
-
-.search-text {
-  color: black;
-}
-
-.filler-poster {
-  background-color: #9f9f9f;
-  width: 10%;
-  height: 10%;
-  margin: 0 auto;
-  border-radius: 1rem;
-}
-
-.remove-heart, .add-heart {
-  width: 3.2rem;
-  height: auto;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  fill: rgb(177, 0, 0);
-}
-
-.btn {
-  transition: fill 0.3s ease;
 }
