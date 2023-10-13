@@ -68,19 +68,13 @@ const MovieList = ({ category }) => {
       
     </div>
       <button
-        className="bg-[#111827] hover:bg-blue-700 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200 mb-10"
-        onClick={() => {
-          // console.log('hello');
-          setMovieIndex(movieIndex + increaseIndex); 
-          loadMoreMovies(loadedMovies+20); 
-        }
-      }
+        className="bg-[#111827] hover:bg-green-500 text-white py-4 px-8 rounded-full cursor-pointer transition duration-200"
+        onClick={() => setMovieIndex(movieIndex + increaseIndex)}
       >
         Load More...
       </button>
 
     </div>
-    
   );
 }; //end of const MovieList
 
