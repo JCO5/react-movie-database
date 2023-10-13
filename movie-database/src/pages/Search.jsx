@@ -25,7 +25,6 @@ export const Search = () => {
         type="search"
         placeholder="Search for a movie"
         className= "search-text border-2 border-gray-300 bg-white h-10 px-5 pr-15 rounded-full text-2xl focus:outline-none mt-16"
-        className= "text-black border-2 border-gray-300 bg-white h-10 px-10 pr-20 rounded-full text-5xl focus:outline-none mt-16"
         value={query}
         onChange={onChange}
       />
