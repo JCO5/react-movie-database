@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaEnvelope, FaLinkedin} from 'react-icons/fa';
+import tmdbImg from '../image/tmdb-logo.svg'
 
 function About() {
   const people = [
@@ -39,7 +40,7 @@ function About() {
               JJJ Movies is an API-based movie database. We use the TMDb API for our content generation but we are not affiliated with TMDb in any form
             </p>
             <div className='flex justify-center padding pt-16 pb-16'>
-              <img className="h-56 w-56 "src="../src/image/tmdb-logo.svg" alt=""/>
+              <img className="h-56 w-56 "src={tmdbImg} alt="TMDB Logo"/>
             </div>
             <p>
               An API-based Movie Database

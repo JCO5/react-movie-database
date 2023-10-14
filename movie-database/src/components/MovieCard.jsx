@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalState';
+import fillerPoster from '../image/filler-poster.svg';
 
 const getPosterURL = (posterpath)=>{
     return `https://www.themoviedb.org/t/p/original/${posterpath}`
@@ -37,7 +38,7 @@ const MovieCard = ( movie ) => {
                 {movie.poster_path ? (
                 <img src={getPosterURL(movie.poster_path)} alt={movie.title} /> 
                 ) : (
-                <img src="../src/image/filler-poster.svg" alt={movie.title} />
+                <img src={fillerPoster} alt={movie.title} />
                 )}
                 <h3 className='text-base card-info absolute bg-black/50 flex bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 p-8'>{movie.overview}</h3>      
             </Link>    

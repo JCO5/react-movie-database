@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 const AppRouter = () => {
     return (
     <GlobalProvider>
-    <BrowserRouter >
+    <BrowserRouter basename='/jjj-movies' >
     <div className='bg-gradient-to-r from-green-700 to-blue-900 text-white'>
     <NavBar/>
         <Routes>
