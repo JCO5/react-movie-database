@@ -32,7 +32,7 @@ const MovieCard = ( movie ) => {
     
     return (
     <section className="card">
-        <div className='group relative w-full'>
+        <div className='group relative w-full transform transition-transform duration-300 ease-in-out hover:scale-105'>
 
             <Link className="relative inline-block"to={`/single/${movie.id}`}>
                 {movie.poster_path ? (

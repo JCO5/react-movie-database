@@ -8,7 +8,7 @@ export const Favorites = () => {
   
   return (
     <div>
-      <h1 className='heading pt-32 mb-32'>Your Favorites ({favorites.length}) </h1>
+      <h1 className='heading pt-16 mb-32'>Your Favorites ({favorites.length}) </h1>
       {favorites.length > 0 ? (
         <div className="card grid grid-cols-1 md:grid-cols-4 pb-16">
           {favorites.map((movie) => (
