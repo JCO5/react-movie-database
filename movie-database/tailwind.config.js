@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'sg': '500px',
+      },
       backgroundColor: {
         'primary': '#3490dc', // Replace with your desired color
         'secondary': '#ffed4a', // Replace with another color

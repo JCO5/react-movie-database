@@ -12,7 +12,7 @@ function RadioMovies() {
 
     return (
         <>
-        <div className="card gap-2 md:grid md:grid-cols-4 grid grid-cols-2">
+        <div className="card gap-2 md:grid md:grid-cols-4 grid grid-cols-2 mt-12">
             {/* Radio buttons */}
             <div className="radio-button relative m-4">
                 <input

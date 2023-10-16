@@ -24,7 +24,6 @@ useEffect(() => {
   };
 
 const addMovieToFavorites = (movie) => {
-    console.log(movie);
     const roundedVoteAverage = roundVoteAverage(movie.vote_average);
     const movieWithRoundedVote = { ...movie, vote_average: roundedVoteAverage };
     dispatch({ type: 'ADD_MOVIE_TO_FAVORITES', payload: movieWithRoundedVote });

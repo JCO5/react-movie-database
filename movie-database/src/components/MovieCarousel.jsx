@@ -27,11 +27,9 @@ const MovieCarousel = () => {
 
   return (
     <div className="container">
-    <div className='pl-16 pr-16'>
-      <div className='text-left'>
-        <h1 className='heading pt-8 text-left'>Welcome to your escape!</h1>
-        <h2 className='pb-12'>The place for you to find your favorite movies or catch up on your watchlist.</h2>
-      </div>
+    <div className='px-16'>
+        <h1 className='heading pt-8 leading-tight'>Welcome to your escape!</h1>
+        <h2 className='pt-4 pb-8'>The place for you to find your favorite movies or catch up on your watchlist.</h2>
     </div>
 
       <Swiper
@@ -43,7 +41,7 @@ const MovieCarousel = () => {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
+          depth: 120,
           modifier: 2.5,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}

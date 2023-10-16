@@ -29,7 +29,7 @@ export const Search = () => {
             onChange={onChange}
           />
       {results.length > 0 ? (
-        <div className="card grid grid-cols-1 md:grid-cols-4 pt-none">
+        <div className="card grid grid-cols-1 sg:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-none">
           {results.map((movie) => (
             <div key={movie.id}>
               <MovieCard movie={movie} />
